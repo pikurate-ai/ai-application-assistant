@@ -78,24 +78,24 @@ ai-application-assistant/
 
 ## 개발 로드맵
 
-### Phase 1: 환경 설정 (현재)
+### Phase 1: 환경 설정 ✅
 - [x] GitHub 레포지토리 생성
-- [ ] 프로젝트 구조 생성
+- [x] 프로젝트 구조 생성
 - [ ] Google Cloud Project 설정
 - [ ] Google Docs API 활성화
-- [ ] OpenAI API 키 발급
+- [x] OpenAI API 키 발급
 
-### Phase 2: 백엔드 개발
-- [ ] Express 서버 기본 구조
-- [ ] OpenAI API 연동
-- [ ] Google Docs API 연동
-- [ ] 프롬프트 엔지니어링 (의도 파악, 내용 생성, 분량 조절)
+### Phase 2: 백엔드 개발 ✅
+- [x] Express 서버 기본 구조
+- [x] OpenAI API 연동
+- [x] Google Docs API 연동 (기본 구조)
+- [x] 프롬프트 엔지니어링 (의도 파악, 내용 생성, 분량 조절)
 
-### Phase 3: 프론트엔드 개발
-- [ ] React 앱 기본 구조
-- [ ] 입력 폼 UI (지원서 양식, 기존 데이터)
-- [ ] 결과 표시 UI
-- [ ] Google OAuth 로그인
+### Phase 3: 프론트엔드 개발 ✅
+- [x] React 앱 기본 구조
+- [x] 입력 폼 UI (지원서 양식, 기존 데이터)
+- [x] 결과 표시 UI
+- [ ] Google OAuth 로그인 (Phase 4로 이동)
 
 ### Phase 4: 통합 & 배포
 - [ ] 프론트엔드-백엔드 연동
@@ -149,6 +149,30 @@ PORT=3000
 ## 라이선스
 MIT
 
+## 현재 진행 상황
+
+**백엔드:** ✅ 완료 및 실행 중 (http://localhost:3000)  
+**프론트엔드:** ✅ 완료 및 실행 중 (http://localhost:5173)  
+**Google Docs 연동:** ⚠️ OAuth 설정 필요
+
+## 빠른 시작
+
+### 1. 백엔드 실행
+```bash
+cd backend
+npm run dev
+```
+
+### 2. 프론트엔드 실행
+```bash
+cd frontend
+npm run dev
+```
+
+### 3. 브라우저 접속
+http://localhost:5173
+
 ## 작성 일시
 - 생성: 2025-11-22
 - 최종 업데이트: 2025-11-22
+- MVP 코어 기능 완료: 2025-11-22
