@@ -14,7 +14,7 @@ async function createDocument(content, accessToken) {
     // Create new document
     const createResponse = await docs.documents.create({
       requestBody: {
-        title: `지원서 - ${new Date().toLocaleDateString('ko-KR')}`
+        title: `정부지원과제 신청서 - ${new Date().toLocaleDateString('ko-KR')}`
       }
     });
 

@@ -48,36 +48,36 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🤖 AI 지원서 자동 작성 도우미</h1>
-        <p>기존 지원서를 기반으로 새로운 지원서를 자동으로 생성합니다</p>
+        <h1>🏛️ AI 정부지원과제 자동 작성 도우미</h1>
+        <p>피큐레잇 | 기존 정부과제 신청서를 기반으로 새로운 신청서를 자동으로 생성합니다</p>
       </header>
 
       <main className="main">
         <div className="input-section">
           <div className="form-group">
             <label htmlFor="newQuestions">
-              📝 새로운 지원서 질문 항목
+              📝 새로운 정부지원과제 신청서 질문 항목
               <span className="required">*</span>
             </label>
             <textarea
               id="newQuestions"
               value={newQuestions}
               onChange={(e) => setNewQuestions(e.target.value)}
-              placeholder="예시:&#10;1. 지원 동기를 작성해주세요&#10;2. 본인의 강점을 설명해주세요&#10;3. 입사 후 포부를 작성해주세요"
+              placeholder="예시:&#10;1. 회사 소개 및 주요 사업 내용을 기술하시오&#10;2. 보유 기술 및 기술 개발 역량을 설명하시오&#10;3. 연구개발 계획 및 추진 전략을 작성하시오&#10;4. 사업화 전략 및 기대효과를 기술하시오"
               rows="8"
             />
           </div>
 
           <div className="form-group">
             <label htmlFor="previousApplications">
-              📄 기존 지원서 데이터
+              📄 기존 정부과제 신청서 데이터
               <span className="required">*</span>
             </label>
             <textarea
               id="previousApplications"
               value={previousApplications}
               onChange={(e) => setPreviousApplications(e.target.value)}
-              placeholder="기존에 작성했던 지원서 내용을 여기에 붙여넣으세요.&#10;여러 개의 지원서를 한 번에 입력할 수 있습니다."
+              placeholder="기존에 작성했던 정부지원과제 신청서 내용을 여기에 붙여넣으세요.&#10;(피큐레잇의 회사 소개, KMS 기반 AI 챗봇 기술, 사업 계획 등)&#10;여러 개의 신청서를 한 번에 입력할 수 있습니다."
               rows="12"
             />
           </div>
@@ -101,7 +101,7 @@ function App() {
             onClick={handleGenerate}
             disabled={loading || !newQuestions || !previousApplications}
           >
-            {loading ? '생성 중...' : '✨ 지원서 생성하기'}
+            {loading ? '생성 중...' : '✨ 정부과제 신청서 생성하기'}
           </button>
         </div>
 
@@ -142,7 +142,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Made with ❤️ using OpenAI GPT & Google Docs API</p>
+        <p>피큐레잇 (Pikurate) | KMS 기반 AI 챗봇 에이전트 빌더 | Made with ❤️ using OpenAI GPT & Google Docs API</p>
       </footer>
     </div>
   )
